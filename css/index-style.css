@@ -1,0 +1,143 @@
+
+    /* para colocar opacidade apenas na imagem*/     /*: :before é utilizado para criar um pseudo-elemento */
+.background-top::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    z-index: 1; /*para ficar atrás do texto*/
+}
+
+    /*Para indicar que o texto fica a frente da imagem e não sofre alteração do comando de cima */
+.background-top h1{
+    position: relative;
+    z-index: 2;
+    color: black;
+    font-size: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+    /*Configura a parte caixa preta em volta do botão*/
+.button {
+    width: 173px;
+    height: 50px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 12px;
+}
+    /*Configura as letras e animação do botão */
+.button a {
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.3s ease, transform 0.5s ease; /* Transições suaves */
+    padding: 3px 16px; /* Espaçamento interno */
+}
+
+.button a:hover {
+    background-color: #c5c5c5; /* Muda a cor de fundo ao passar o mouse */
+    transform: scale(1.0.3); /* Aumenta o tamanho do link em 10% */
+}
+
+    /*Comando base que cria a caixa e tranforma a imagem em background */
+    .background-top {
+        width: 100%;
+        height: 600px;
+        background-image: url('./img/advocacia.jpg');
+        border-radius: 6px;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Fundo fixo para efeito parallax */
+        color: black;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+
+    
+    /*Configuração do efeito parallax*/
+    .content {
+        height: 1200px; /* Altura para permitir a rolagem */
+        padding: 20px;
+    }
+
+   
+
+    /*informações pessoais*/
+.info-add {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    display: flex;
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+    padding: 20px;
+    background-color: #c5c5c5;
+    border-radius: 6px;
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.info-add.visible{
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-inf {
+    width: 175px;
+    height: 160px;
+    border-radius: 6px;
+    object-fit: cover; /* Garante que a imagem fique ajustada dentro do espaço */
+}
+
+.info-add p {
+    font-size: medium;
+    margin: 0;
+    max-width: 90%; /* Limita a largura do texto para não ocupar todo o espaço */
+    font-family: 'exo2', roboto;
+}
+
+.info-add h1{
+    
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+ /*Quadrado do rodapé*/
+.footer_style{
+    width: 100%;    /* Largura do quadrado */
+    height: 100%;   /* altura do quadrado */
+    background-color: rgb(0, 0, 0); /* Cor do fundo */
+    color: rgb(255, 255, 255);  /* Cor da letra */
+    display: flex;  /* Centraliza o texto */
+    border-radius: 3px;
+    justify-content: left;  /* Centraliza o texto horizontalmente */
+    align-items: center;    /* Centraliza o texto verticalmente */
+    font-family: arial, sans-serif; /* Altera fonte */
+    font-size: 12px;    /* Tamanho da fonte */
+    padding: auto;
+
+}
+
+.imagem_footer{
+    width: 37px; ;
+    height: 35px;
+    margin: 5px;
+
+}
+
