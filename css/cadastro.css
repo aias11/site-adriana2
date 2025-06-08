@@ -1,0 +1,77 @@
+:root {
+    --cinza-chumbo: #5b5b58;
+    --preto: #000;
+    --branco: #fff;
+    --azul: #0e4bef;
+    --cinza-claro: #D3D3D3;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-claro);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box {
+    background-color: var(--cinza-chumbo);
+    width: 300px;
+    border-radius: 20px;
+    padding: 25px;
+}
+.input {
+    border: none;
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+    border-radius: 12px;
+    width: 280px;
+    height: 30px;
+    margin-bottom: 16px; /* Espaçamento entre os campos */
+    padding: 0 10px;
+}
+
+.container input::placeholder {
+    color: var(--preto);
+    opacity: 0.75;
+}
+
+.container h1, h2 {
+    color: var(--branco);
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.cadastrar {
+    border: none;
+    background-color: var(--azul);
+    color: var(--branco);
+    border-radius: 12px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    width: 100%;
+    height: 35px;
+    margin-top: 8px; /* Espaço entre input e botão */
+    cursor: pointer;
+}
+.requisitos {
+  color: var(--branco);
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 12px;
+  opacity: 0.75;
+  display: flex;
+  flex-direction: column;
+}
+
+.requisitos .item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre ícone e texto */
+}
+
+.requisitos .item i {
+  font-size: 12px;
+}
